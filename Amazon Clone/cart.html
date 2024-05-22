@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Creating Navigation Bar -->
+
+    <nav class="main-navigation sticky-top">
+      <a href="/">
+        <img src="/assets/amazon_logo.png" width="100" alt="" />
+      </a>
+      <div class="nav-country">
+        <img src="/assets/location_icon.png" height="20" alt="" />
+        <div>
+          <p>Deliver to</p>
+          <h1>United States</h1>
+        </div>
+      </div>
+      <div class="nav-search">
+        <div class="nav-search-category">
+          <p>All</p>
+          <img src="/assets/dropdown_icon.png" height="12" alt="" />
+        </div>
+        <input
+          type="text"
+          class="nav-search-input"
+          placeholder="Search Amazon"
+        />
+        <img src="/assets/search_icon.png" class="nav-search-icon" alt="" />
+      </div>
+      <div class="nav-language">
+        <img src="/assets/us_flag.png" width="25px" alt="" />
+        <p>EN</p>
+        <img src="/assets/dropdown_icon.png" width="8px" alt="" />
+      </div>
+      <div class="nav-text">
+        <p><a href="signin.html">Hello, Sign in</a></p>
+        <p><a class="signout-btn" href="signin.html">Sign Out</a></p>
+        <h1>
+          Account & Lists
+          <img src="/assets/dropdown_icon.png" width="8px" alt="" />
+        </h1>
+      </div>
+      <div class="nav-text">
+        <p>Return</p>
+        <h1>& Orders</h1>
+      </div>
+
+      <a href="signin.html" class="mobile-user-icon" style="display: none"
+        ><img src="/assets/user.png" alt=""
+      /></a>
+
+      <button
+        class="cart-btn btn btn-primary"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+      >
+        <div class="container-nav">
+          <svg
+            width="32"
+            height="32"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-cart3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+            />
+          </svg>
+          <span>0</span>
+        </div>
+      </button>
+
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="cart-body-details offcanvas-body">
+          <button class="checkout" type="button">Proceed to Checkout</button>
+        </div>
+      </div>
+
+      <!-- <div class="container-nav">
+        
+      <a href="" class="nav-cart">
+        <svg class="nav-cart-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+        </svg>
+        <span>0</span>
+      </div> -->
+
+      <!-- <i class="cart-icon fa-regular fa-cart-shopping"></i> -->
+      <!-- <img src="/assets/cart_icon.png" width="35px" alt="" /> -->
+      <!-- <h4>Cart</h4> -->
+      <!-- </a> -->
+    </nav>
+
+    <!-- Creating the Sub-Menu -->
+
+    <div class="nav-bottom">
+      <div>
+        <button
+          class="btn btn-primary d-flex"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <img src="/assets/menu_icon.png" width="25px" alt="" />
+          <p>All</p>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
+          <div class="offcanvas-header offcanvas-categories-header">
+            <h2 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+              Hello, Sign In
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body offcanvas-categories">
+            <h4>Digital Content & Devices</h4>
+            <ul>
+              <li>Amazon Music</li>
+              <li>Kindle E-readers & Books</li>
+              <li>Amazon Appstore</li>
+            </ul>
+            <hr />
+
+            <!-- Second header and list -->
+            <h4>Shop by Department</h4>
+            <ul>
+              <li>Electronics</li>
+              <li>Computers</li>
+              <li>Smart Home</li>
+              <li>Arts & Crafts</li>
+              <li>see all</li>
+            </ul>
+            <hr />
+
+            <!-- Third header and list -->
+            <h4>Programs & Features</h4>
+            <ul>
+              <li>Gift Cards</li>
+              <li>Shop by Interest</li>
+              <li>Amazon Live</li>
+              <li>International Shopping</li>
+              <li>See all</li>
+            </ul>
+            <hr />
+
+            <!-- Fourth header and list -->
+            <h4>Help & Settings</h4>
+            <ul>
+              <li>Your Account</li>
+              <li><i class="fa-thin fa-globe"></i> English</li>
+              <li>
+                <img src="/assets/us_flag.png" width="25px" alt="" /> United
+                States
+              </li>
+              <li>Customer Service</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p>Today's Deals</p>
+      <p>Customer Service</p>
+      <p>Registry</p>
+      <p>Gift Cards</p>
+      <p>Sell</p>
+    </div>
+
+    <footer class="footer-cart">
+      <img src="/assets/amazon_logo.png" width="100" alt="" />
+      <p>&copy 1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/4b5e1f36ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/all.min.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
